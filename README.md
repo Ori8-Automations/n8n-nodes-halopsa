@@ -16,7 +16,7 @@ n8n ships a built-in HaloPSA node (`n8n-nodes-base.halopsa`) that covers standar
 
 Beyond the missing resources, the stock node's credential requires a full base URL, which creates friction in multi-tenant or subdomain-per-client setups. This node uses the HaloPSA subdomain as the credential field and handles the OAuth2 client credentials flow with a per-credential token cache, so repeated executions within a workflow don't re-authenticate on every node call.
 
-The scope is deliberately narrower than the stock node — no client or user management. The goal is automation pipelines that interact with the ticket lifecycle: read tickets and their context, write notes, trigger on new or updated tickets. Deleting tickets or managing users from n8n workflows is out of scope by design and explicitly called out in the write-operations warning, since these nodes are frequently the backend for AI agent and MCP tool workflows where unguarded write access is a liability.
+The scope is deliberately narrower than the stock node — no client or user management. The goal is automation pipelines that interact with the ticket lifecycle: read tickets and their context, create and update tickets, and write notes. There is no trigger node. Deleting tickets or managing users from n8n workflows is out of scope by design and explicitly called out in the write-operations warning, since these nodes are frequently the backend for AI agent and MCP tool workflows where unguarded write access is a liability.
 
 ## npm status / package positioning
 
@@ -43,7 +43,7 @@ Restart n8n after install.
 
 ## Credential setup
 
-Add a **HaloPSA API** credential in n8n:
+Add a **Better HaloPSA API** credential in n8n (not n8n's built-in credential, which is labelled **HaloPSA API**):
 
 | Field | Value |
 |---|---|
@@ -82,4 +82,4 @@ For AI agent / MCP use, build dedicated wrapper workflows that expose only the r
 
 ## Credits
 
-Built by [Claude](https://claude.ai) (Anthropic) under the direction of **Ori8**, the Hermes-based AI agent at the core of [Ori8 Automations](https://github.com/ori8automations). A human provided requirements, review, and final approval.
+Built by [Claude](https://claude.ai) (Anthropic) under the direction of **Ori8**, the Hermes-based AI agent at the core of [Ori8 Automations](https://github.com/Ori8-Automations). A human provided requirements, review, and final approval.
