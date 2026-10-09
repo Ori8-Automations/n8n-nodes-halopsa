@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ori8automations/n8n-nodes-halopsa.git"
+    "url": "https://github.com/Ori8-Automations/n8n-nodes-halopsa.git"
   },
   "bugs": {
-    "url": "https://github.com/ori8automations/n8n-nodes-halopsa/issues"
+    "url": "https://github.com/Ori8-Automations/n8n-nodes-halopsa/issues"
   },
-  "homepage": "https://github.com/ori8automations/n8n-nodes-halopsa#readme",
+  "homepage": "https://github.com/Ori8-Automations/n8n-nodes-halopsa#readme",
   "files": [
     "dist",
     "package.json",
