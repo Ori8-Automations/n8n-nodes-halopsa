@@ -71,6 +71,7 @@ This node includes **write operations**: Ticket Create, Ticket Update, and Actio
 - **Do not expose this node directly to AI agents or MCP tools.** Use narrow read-only wrapper workflows instead.
 - `addNote` with `Private / Internal Only` set to **false** will post a customer-visible note.
 - Ticket Create and Update call the live HaloPSA API immediately.
+- There is deliberately no ticket delete and no client or user management (users are only looked up to fill the dropdown). These nodes often back AI agent and MCP tool workflows, where that kind of write access is a liability.
 
 For AI agent / MCP use, build dedicated wrapper workflows that expose only the read operations you need (search tickets, get ticket, get notes).
 
